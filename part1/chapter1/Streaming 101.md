@@ -67,7 +67,6 @@
 
 Lambda架构的基本思想是运行两套系统，一套是流式的，一套是批量的，做同样的计算和处理，流式系统给一个低延迟的，但是不精确的结果。正确的结果，需要批量系统后续给出。这个概念最初由Twitter的Nathan Marz（也是[Storm](http://storm.apache.org/)的作者）提出。在当时的场景下，这样一个概念十分受到欢迎。但是Lambda也存在明显的问题，同时维护两套系统的代价和成本都很高，而且还要最终合并两条数据链路的结果。
 
-本人一直比较支持强一致的流式系统，同样比较赞成Jay Kreps（Kafka的作者之一）的文章["Questioning The Lambda Architecture"](https://www.oreilly.com/radar/questioning-the-lambda-architecture/)，Kreps使用可重放系统（类似Kafka，用作流式连接器）解决了上下文重复性问题，他提出了Kappa架构，利用单个系统来实现需求，而不是利用流式和批处理两套系统。我不认同一个架构名称需要使用自己的希腊字母名称，但是我原则上完全支持这个想法。:)
+我一直比较支持强一致的流式系统，同样比较赞成Jay Kreps（Kafka的作者之一）的文章["Questioning The Lambda Architecture"](https://www.oreilly.com/radar/questioning-the-lambda-architecture/)，Kreps使用可重放系统（类似Kafka，用作流式连接器）解决了上下文重复性问题，他提出了Kappa架构，利用单个系统来实现需求，而不是利用流式和批处理两套系统。我不认同一个架构名称需要使用自己的希腊字母名称，但是我原则上完全支持这个想法。:)
 
-
-
+老实说，我会更进一步。我会说好的流系统设计实际上应该包含批处理系统的所有功能，或者说，流系统应是批处理系统的超集。当前应该没有必要存在批处理系统的。同时，向Apache Flink员工表示敬意，希望他们牢记这个想法，并建立一个真正的流式处理系统: 在任何时间，将所有信息流式传输，即使在批处理模式下；我喜欢它。
