@@ -8,8 +8,7 @@
 
 * 数据到达后立即被处理，可以更好的使用资源和保证资源的一致性
 
-尽管商业上对于流失式系统的需求很强量，但是长期而来，流式系统依旧不够成熟。目前这一事情有所缓解，我认为主要是我的[”流式101“](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/)和[”流式102“](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-102/)（本书的前几章是关于
-显然是基于此）两篇博客的刺激，目前工业界有很多人期望看到流式的蓬勃发展，也有很多同僚热衷于此。
+尽管商业上对于流式系统的需求很强，但是长期而来，流式系统依旧不够成熟。目前这一事情有所缓解，我认为主要是我的[”流式101“](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/)和[”流式102“](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-102/)（本书的前几章是关于显然是基于此）两篇博客的刺激，目前工业界有很多人期望看到流式的蓬勃发展，也有很多同僚热衷于此。
 
 尽管在前期的战斗中有一些收货，但是我依旧会强调一下在[”流式101“](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/)中的一些概念，避免很多读者并不知道这个前置信息。本书是在这些观点的一些发展。
 
